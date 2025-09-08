@@ -1,0 +1,15 @@
+#!/bin/bash
+# Programmi kasutamiseks pead installima ncal-i (sudo apt install ncal)
+echo ""
+
+# paev, kuu ja aasta
+date +"%D %B %Y"
+
+# kellaaeg
+date +"Kell on %H:%M"
+
+echo ""
+
+# kalender
+date +"Kalender %B %Y"
+cal | tail -n 7
