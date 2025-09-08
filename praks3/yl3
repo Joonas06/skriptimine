@@ -1,0 +1,12 @@
+#!/bin/bash
+read -p "Sisesta ainepunktide arv: " ainepunktid
+
+read -p "Sisesta nädalate arv: " nadalad
+
+aeg=$(echo "$ainepunktid * 26" | bc)
+
+ajakulu=$(echo "scale=2; $aeg / $nadalad" | bc)
+
+umbes_ajakulu=$(echo "($ajakulu + 0.9)/1" | bc)
+
+echo "nädala eeldatav ajakulu on $umbes_ajakulu tundi."
