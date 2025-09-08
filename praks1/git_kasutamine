@@ -1,0 +1,31 @@
+# root kasutajana:
+# installi 
+apt-get insatll git
+#tavakasutajana:
+#esmakordselt:
+
+# seadista - määra kasutajanimi, email, editor
+git config --glolbal user.name eesnimi perenimi
+git config --global user.email mina@email.mida
+git config --global core.editor nano
+
+# loo kataloog, kus hakkad skriptima
+mkdir skriptimine
+
+# sisene antud kausta
+cd skriptimine
+
+# tekita lokaalne repoitoorium git süsteemi jaoks antud kaustas
+git init 
+
+#remote seadistamine:
+git remote add nimi github:address
+git remote add skriptimine git@github.com: mina/skriptimine.git
+
+#git remote kontroll
+git remote -v
+
+#põhikasutamine:
+
+#pane faili järgmisiele:
+git add filinimi
