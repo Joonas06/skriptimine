@@ -1,0 +1,25 @@
+#!/bin/bash
+# Skript tervitab kasutajat vastavalt süsteemi kellaajale ja lisab kasutajanime
+
+# Loeme süsteemi kellaaja (ainult tunnid)
+tund=$(date +%H)
+
+# Loeme kasutajanime süsteemist
+kasutaja=$USER
+
+# Tervitame vastavalt kellaajale
+if [ $tund -ge 6 ] && [ $tund -lt 12 ]
+then
+    echo "Tere hommikust, $kasutaja!"
+elif [ $tund -ge 12 ] && [ $tund -lt 18 ]
+then
+    echo "Tere päevast, $kasutaja!"
+elif [ $tund -ge 18 ] && [ $tund -lt 22 ]
+then
+    echo "Tere õhtust, $kasutaja!"
+elif [ $tund -ge 22 ] || [ $tund -lt 6 ]
+then
+    echo "Head ööd, $kasutaja!"
+else
+    echo "Vigane kellaaeg – kontrolli süsteemi aega"
+fi
