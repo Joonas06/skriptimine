@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+osch=0
+echo "1. Unix (Sun OS)"
+echo "2. Linux (Red Hat)"
+echo -n "Vali oma operatsioonisüsteem [1 või 2]: "
+read osch
+if [ $osch -eq 1 ] ; then
+    echo "Sa valisid Unix (Sun OS)"
+else #### sisemine if ehk if ifi sees ######
+    if [ $osch -eq 2 ] ; then
+        echo "Sa valisid Linux (Red Hat)"
+    else
+        echo "Kas sulle ei meeldi Unix ega Linux?"
+    fi
+fi
