@@ -1,0 +1,21 @@
+#!/bin/bash
+# Skript küsib kasutajalt kellaaja (tundide arv) ja tervitab vastavalt ajavahemikule
+
+echo -n "Sisesta aja väärtus (täistund 0–23): "
+read tund
+
+if [ $tund -ge 6 ] && [ $tund -lt 12 ]
+then
+    echo "Tere hommikust"
+elif [ $tund -ge 12 ] && [ $tund -lt 18 ]
+then
+    echo "Tere päevast"
+elif [ $tund -ge 18 ] && [ $tund -lt 22 ]
+then
+    echo "Tere õhtust"
+elif [ $tund -ge 22 ] || [ $tund -lt 6 ]
+then
+    echo "Head ööd!"
+else
+    echo "Vigane sisend – palun sisesta tund vahemikus 0 kuni 23"
+fi
